@@ -27,8 +27,21 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var TextField: UITextField!
     
     
+    
     @IBAction func SaveButton(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistenContainer.viewContext{
+            let photoToSave = Photos(entity: Photos.entity() , insertInto: context)
+        photoToSave.caption = captionText.text
+            if let userImage = newImageView.image {
+                if let userImageData
+            }
+        }
     }
+
+    
+    
+    
+    
     
     @IBAction func AlbumsButton(_ sender: UIButton) {
     }
