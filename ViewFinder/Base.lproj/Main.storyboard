@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="113.83928571428571"/>
         </scene>
-        <!--Title-->
+        <!--Add Photo View Controller-->
         <scene sceneID="mLa-dJ-dC8">
             <objects>
                 <viewController id="EKC-4V-QcQ" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,15 +95,39 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pBp-gT-4dp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="1fn-aQ-WFt"/>
+                    <navigationItem key="navigationItem" id="1fn-aQ-WFt"/>
                     <connections>
-                        <outlet property="PlaceHolderPhoto" destination="nPR-n3-g0A" id="UTo-WX-qQK"/>
+                        <outlet property="PlaceHolderPhoto" destination="nPR-n3-g0A" id="Mpl-vd-aWx"/>
                         <outlet property="TextField" destination="nMS-YP-N0R" id="O53-US-cam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qll-Fh-Eqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1711.5942028985507" y="113.83928571428571"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="nlt-fJ-T06">
+            <objects>
+                <viewController id="Bz3-Vf-WyE" customClass="PhotoDetailViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MGR-Nl-sRs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-TK-f12">
+                                <rect key="frame" x="20" y="82" width="374" height="312"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Nai-u9-mXa"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6Th-TK-f12" id="4JX-1b-AW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfX-TL-821" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473.913043478261" y="113.83928571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BqK-CH-735">

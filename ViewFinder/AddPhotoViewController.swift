@@ -24,26 +24,39 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         present(newScreen, animated: true, completion: nil)
     }
     
+    
+    
     @IBOutlet weak var TextField: UITextField!
     
     
     
     @IBAction func SaveButton(_ sender: UIButton) {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistenContainer.viewContext{
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let photoToSave = Photos(entity: Photos.entity() , insertInto: context)
-        photoToSave.caption = captionText.text
-            if let userImage = newImageView.image {
-                if let userImageData
-            }
+          
+             photoToSave.caption = TextField.text
+            
+             if let userImage = PlaceHolderPhoto.image {
+               
+                if let userImageData = userImage.pngData() {
+                    photoToSave.imageData = userImageData
+                }
         }
+       (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        
+       navigationController?.popViewController(animated: true)
+      
+        }
+    
     }
 
     
-    
-    
+
     
     
     @IBAction func AlbumsButton(_ sender: UIButton) {
+        newScreen.sourceType = .photoLibrary
+        present(newScreen, animated: true, completion: nil)
     }
     
     @IBOutlet weak var PlaceHolderPhoto: UIImageView!
